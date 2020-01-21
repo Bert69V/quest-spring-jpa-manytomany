@@ -33,11 +33,21 @@ public class Wizard {
             inverseJoinColumns = @JoinColumn(name = "course_id"))
     private List<Course> courses = new ArrayList<>();
 
-     
-    
     public Wizard() {
     }
-    
+        
+    public Wizard(String firstName, String lastName, 
+        	Date birthday, String birthPlace, String biography,
+        	boolean muggle){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthday = birthday;
+        this.birthPlace = birthPlace;
+        this.biography = biography;
+        this.muggle = muggle;
+    	}
+       
+   
     public Long getId() {
         return id;
     }
